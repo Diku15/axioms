@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="welcomeuser.css">
+    <title>Welcome, User</title>
+</head>
+<body>
+
+    <header>
+        <h2>Welcome, User!</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <label for="vendorDropdown">Select Vendor:</label>
+                <select id="vendorDropdown" name="vendorDropdown">
+                    <option value="caterist">Caterist</option>
+                    <option value="floorist">Floorist</option>
+                    <option value="decoration">Decoration</option>
+                    <option value="lighting">Lighting</option>
+                </select>
+            </li>
+            <li><a href="#" onclick="redirectTo('cart')">Cart (Show)</a></li>
+            <li><a href="#" onclick="redirectTo('guest-list')">Guest List</a></li>
+            <li><a href="#" onclick="redirectTo('order-status')">Order Status</a></li>
+            <li><a href="#" onclick="redirectTo('logout')">Logout</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function redirectTo(page) {
+            // You can implement the redirection logic here
+            console.log(`Redirecting to ${page}`);
+        }
+    </script>
+
+</body>
+</html>
+

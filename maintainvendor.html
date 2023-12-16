@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="maintainvendor.css">
+    <title>Maintain Vendor</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-buttons">
+            <button class="home-button" onclick="redirectTo('home')">Home</button>
+            <button class="logout-button" onclick="redirectTo('logout')">Log Out</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <button onclick="redirectTo('membership')">Membership</button>
+                <ul class="sub-menu">
+                    <li><button onclick="redirectTo('add')">Add</button></li>
+                    <li><button onclick="redirectTo('create')">Create</button></li>
+                </ul>
+            </li>
+            <li>
+                <button onclick="redirectTo('user-management')">User Management</button>
+                <ul class="sub-menu">
+                    <li><button onclick="redirectTo('add')">Add</button></li>
+                    <li><button onclick="redirectTo('create')">Create</button></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        function redirectTo(page) {
+            // You can implement the redirection logic here
+            console.log(`Redirecting to ${page}`);
+        }
+    </script>
+
+</body>
+</html>

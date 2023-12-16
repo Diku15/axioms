@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor.css">
+    <title>Vendors</title>
+</head>
+<body>
+
+    <header>
+        <h2>Vendors</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showVendors('all')">All Vendors</a></li>
+            <li><a href="#" onclick="showVendors('florist')">Florist</a></li>
+            <li><a href="#" onclick="showVendors('other')">Other Vendors</a></li>
+        </ul>
+    </nav>
+
+    <div class="vendor-container" id="vendorContainer">
+        <!-- Vendor Cards will be dynamically added here based on selection -->
+    </div>
+
+    <script>
+        function showVendors(category) {
+            const vendorContainer = document.getElementById('vendorContainer');
+            // Clear previous content
+            vendorContainer.innerHTML = "";
+
+            // Sample data - replace with actual vendor data
+            const vendorsData = [
+                { name: "Vendor 1", contact: "vendor1@example.com", category: "other" },
+                { name: "Vendor 2", contact: "vendor2@example.com", category: "florist" },
+                { name: "Vendor 3", contact: "vendor3@example.com", category: "other" },
+                { name: "Vendor 4", contact: "vendor4@example.com", category: "florist" },
+            ];
+
+            // Filter vendors based on the selected category
+            const filteredVendors = category === 'all' ? vendorsData : vendorsData.filter(vendor => vendor.category === category);
+
+            // Display each vendor card
+            filteredVendors.forEach(vendor => {
+                const card = document.createElement('div');
+                card.classList.add('vendor-card');
+                card.innerHTML = `
+                    <h3>${vendor.name}</h3>
+                    <p>Contact: ${vendor.contact}</p>
+                    <button onclick="viewShopItems('${vendor.name}')">View Shop Items</button>
+                `;
+                vendorContainer.appendChild(card);
+            });
+        }
+
+        function viewShopItems(vendorName) {
+            // Implement logic to view shop items for the selected vendor
+            console.log(`Viewing shop items for ${vendorName}`);
+        }
+    </script>
+
+</body>
+</html>

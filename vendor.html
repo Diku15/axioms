@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor.css">
+    <title>Welcome Vendor</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome, Vendor!</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#your-items">Your Items</a></li>
+            <li><a href="#add-new-item">Add New Item</a></li>
+            <li><a href="#transactions">Transactions</a></li>
+            <li><a href="#log-out">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <section id="your-items">
+        <h2>Your Items</h2>
+        <!-- Display vendor's items here -->
+        <p>No items available.</p>
+    </section>
+
+    <section id="add-new-item">
+        <h2>Add New Item</h2>
+        <form>
+            <!-- Form fields for adding a new item go here -->
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required>
+
+            <label for="itemPrice">Item Price:</label>
+            <input type="number" id="itemPrice" name="itemPrice" required>
+
+            <button type="submit">Add Item</button>
+        </form>
+    </section>
+
+    <section id="transactions">
+        <h2>Transactions</h2>
+        <!-- Display vendor's transactions here -->
+        <p>No transactions yet.</p>
+    </section>
+
+    <section id="log-out">
+        <h2>Log Out</h2>
+        <p>Are you sure you want to log out? <a href="#">Log Out</a></p>
+    </section>
+
+</body>
+</html>

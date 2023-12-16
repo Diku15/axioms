@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="welvendor.css">
+    <title>Hello, Vendor!</title>
+</head>
+<body>
+
+    <div class="vendor-container">
+        <h2>Hello, Vendor!</h2>
+        <p class="vendor-name">John Doe</p>
+        <div class="button-container">
+            <button onclick="redirectTo('product-status')">Product Status</button>
+            <button onclick="redirectTo('request-status')">Request Status</button>
+            <button onclick="redirectTo('view-product')">View Product</button>
+            <button onclick="redirectTo('log-out')">Log Out</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectTo(page) {
+            // You can implement the redirection logic here
+            console.log(`Redirecting to ${page}`);
+        }
+    </script>
+
+</body>
+</html>
